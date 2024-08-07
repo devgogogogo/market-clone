@@ -4,6 +4,11 @@
 @import "footer.css";
 @import "main.css";
 
+:root {
+  --button-primary: rgb(255, 110, 1);
+  --button-hover: rgba(255, 110, 1, 0.5);
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
     "Pretendard Variable", Pretendard, Roboto, "Noto Sans KR", "Segoe UI",
@@ -20,12 +25,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 1;
   background-color: chocolate;
 }
 
 @media screen and (max-width: 500px) {
   .media-info-msg {
-    opacity: 0;
+    display: none;
   }
 }
