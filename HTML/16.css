@@ -1,0 +1,55 @@
+:root {
+  --main-color: rgb(57, 216, 36);
+  --asdf: rgb(62, 146, 202);
+}
+
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  height: 600px;
+  border: 3px solid gray;
+}
+div:hover img {
+  transform: scale(1.5) rotateZ(360deg);
+}
+div:hover {
+  background-color: rgb(137, 147, 177);
+  transition: all 1s ease-in-out;
+}
+
+@keyframes moving-logo {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(3) rotateX(360deg);
+  }
+  50% {
+    display: none;
+    transform: scale(3);
+  }
+  55% {
+    display: block;
+    transform: scale(3);
+  }
+  60% {
+    display: none;
+    transform: scale(3);
+  }
+  65% {
+    display: block;
+    transform: scale(3);
+  }
+  75% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+img {
+  width: 300px;
+  animation: moving-logo 2s infinite alternate;
+}
